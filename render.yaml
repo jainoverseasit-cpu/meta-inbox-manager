@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: jain-overseas-inbox-manager
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      # ── Set all of these manually in the Render dashboard ──────────
+      # Never commit real values here — this file is in version control
+      - key: APP_ID
+        sync: false
+      - key: APP_SECRET
+        sync: false
+      - key: PAGE_ACCESS_TOKEN
+        sync: false
+      - key: PAGE_ID
+        sync: false          # FIX: was hardcoded — moved to dashboard
+      - key: INSTAGRAM_ACCOUNT_ID
+        sync: false
+      - key: WEBHOOK_VERIFY_TOKEN
+        sync: false          # FIX: was hardcoded — rotate this value immediately
+      - key: ALLOWED_ORIGIN
+        sync: false          # Optional: set to your dashboard domain for CORS
+      # ── Safe non-secret config ─────────────────────────────────────
+      - key: AUTO_REPLY_ENABLED
+        value: "true"
+      - key: AUTO_REPLY_DELAY_MS
+        value: "3000"
+      - key: NODE_ENV
+        value: production
