@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: jain-overseas-inbox-manager
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: APP_ID
+        sync: false
+      - key: APP_SECRET
+        sync: false
+      - key: PAGE_ACCESS_TOKEN
+        sync: false
+      - key: PAGE_ID
+        value: 857245111037892
+      - key: INSTAGRAM_ACCOUNT_ID
+        sync: false
+      - key: WEBHOOK_VERIFY_TOKEN
+        value: sumitjain_webhook_secret_2026
+      - key: AUTO_REPLY_ENABLED
+        value: "true"
+      - key: AUTO_REPLY_DELAY_MS
+        value: "3000"
+      - key: NODE_ENV
+        value: production

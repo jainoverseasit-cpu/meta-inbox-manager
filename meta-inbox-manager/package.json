@@ -1,0 +1,24 @@
+{
+  "name": "jain-overseas-meta-inbox-manager",
+  "version": "1.0.0",
+  "description": "Facebook & Instagram auto-reply webhook server for Jain Overseas",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["meta", "facebook", "instagram", "webhook", "auto-reply"],
+  "author": "Jain Overseas",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0"
+  }
+}
