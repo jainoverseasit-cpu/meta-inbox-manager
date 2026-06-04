@@ -20,7 +20,7 @@ To get started, please share:
 2. Are you currently in India or abroad?
 3. Have you started any paperwork yet?
 
-Our counsellor will respond within 2 hours. You can also call us directly at [YOUR_PHONE_NUMBER].`,
+Our counsellor will respond within 2 hours. You can also call us directly at +91 9815939392.`,
     },
     {
       keywords: ["french", "france", "french class", "french language", "learn french"],
@@ -84,7 +84,7 @@ How can we help you today? Please tell us what you're looking for and we'll conn
 
 We've received your message and our counsellor will get back to you within 2 hours.
 
-For urgent queries, please call us at [YOUR_PHONE_NUMBER] (Mon–Sat, 10 AM–6 PM IST).`,
+For urgent queries, please call us at +91 9815939392 (Mon–Sat, 10 AM–6 PM IST).`,
     },
   ],
 
@@ -100,7 +100,7 @@ For urgent queries, please call us at [YOUR_PHONE_NUMBER] (Mon–Sat, 10 AM–6 
     },
     {
       keywords: ["contact", "number", "phone", "whatsapp", "call"],
-      reply: `Please DM us directly or WhatsApp us at [YOUR_PHONE_NUMBER] — we're available Mon–Sat, 10 AM to 6 PM IST. 📞`,
+      reply: `Please DM us directly or WhatsApp us at +91 9815939392 — we're available Mon–Sat, 10 AM to 6 PM IST. 📞`,
     },
     {
       keywords: ["default"],
