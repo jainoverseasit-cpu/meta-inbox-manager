@@ -1,4 +1,4 @@
-const { getReply } = require("./templates");
+const { getAIReply } = require("./aiAgent");
 const api = require("./metaApi");
 
 const AUTO_REPLY = process.env.AUTO_REPLY_ENABLED === "true";
@@ -58,7 +58,7 @@ async function handleFBMessage(messagingEvent) {
     if (!messageText || !messageId) return;
     if (hasSeen(messageId)) return;
 
-    const replyText = getReply(messageText, "messages");
+    const replyText = getAIReply(messageText);
 
     log("FACEBOOK", "DM", senderId, messageText,
       AUTO_REPLY ? `Auto-replying...` : `Auto-reply DISABLED — logged only`);
@@ -93,7 +93,7 @@ async function handleFBComment(changeValue) {
     if (!commentId || !message) return;
     if (hasSeen(commentId)) return;
 
-    const replyText = getReply(message, "comments");
+    const replyText = getAIReply(message);
 
     log("FACEBOOK", "COMMENT", from, message,
       AUTO_REPLY ? `Auto-replying to comment on post ${postId}...` : `Auto-reply DISABLED — logged only`);
@@ -127,7 +127,7 @@ async function handleIGMessage(messagingEvent) {
     if (!messageText || !messageId) return;
     if (hasSeen(messageId)) return;
 
-    const replyText = getReply(messageText, "messages");
+    const replyText = getAIReply(messageText);
 
     log("INSTAGRAM", "DM", senderId, messageText,
       AUTO_REPLY ? `Auto-replying...` : `Auto-reply DISABLED — logged only`);
@@ -162,7 +162,7 @@ async function handleIGComment(changeValue) {
     if (!commentId || !message) return;
     if (hasSeen(commentId)) return;
 
-    const replyText = getReply(message, "comments");
+    const replyText = getAIReply(message);
 
     log("INSTAGRAM", "COMMENT", from, message,
       AUTO_REPLY ? `Auto-replying to comment on media ${mediaId}...` : `Auto-reply DISABLED — logged only`);
@@ -235,3 +235,6 @@ async function handleWebhookEvent(body) {
 }
 
 module.exports = { handleWebhookEvent };
+
+
+
